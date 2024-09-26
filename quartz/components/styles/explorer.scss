@@ -132,7 +132,8 @@ button#explorer {
 #explorer-content {
   list-style: none;
   overflow: hidden;
-  max-height: none;
+  overflow-y: auto;
+  max-height: 100%;
   transition:
     max-height 0.35s ease,
     visibility 0s linear 0s;
@@ -140,6 +141,7 @@ button#explorer {
   visibility: visible;
 
   &.collapsed {
+    max-height: 0;
     transition:
       max-height 0.35s ease,
       visibility 0s linear 0.35s;
